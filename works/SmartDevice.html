@@ -142,7 +142,7 @@
       <p class="justify">
          We needed our gas sensor to be able to communicate in order to be used in an IoT environment. We are going to use an Aruino nano coupled to an RN2483 chip for communication. After soldering and connecting the pins, and with the help of TheThingsNetwork (TTN) library our board was able to communicate and send measurements to the TTN site at regular intervals.
          <br>
-         <img src="../img/TTN.png" class="centeredPicture">
+         <img src="../img/TTN.PNG" class="centeredPicture">
          When developing the diagram, we took into account the energy consumption. As our sensor only had to send data at certain times, it was not necessary to power the card continuously. We therefore used a transistor in order to optimize consumption and to supply the card only when sending data.
          <br>
           We used node-red to create a dashboard that allows us to record the measurements and display them in a simple interface. So, on node-red, we realized the flow we wanted to make, starting from a payload reception (ttn uplink), a 'decoding' function, and then a display in the dashboard.
