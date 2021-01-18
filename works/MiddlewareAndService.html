@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio - Middleware and Service</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="../img/favicon.png" rel="icon">
+  <link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Static navbar -->
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">Yanis Imekraz</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li class="active"><a href="MiddlewareAndService.html" class="smoothscroll">Middleware and Service</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+   <section id="works"></section>
+    <div class="container">
+
+      <br>
+      <br>
+      <h1>Middleware and Service</h1>
+      <br>
+      <h4> Service Oriented Architecture </h4>
+      <br>
+      <p class="justify">
+        In this course we have been introduced to the web service. We first learned how to implement soap type web services with a bottom-up approach. We used a Tomcat server to deploy the achievements. We also saw some notions on WSDL before using the SpringBoot framework to automate the development and deployment of web services using the REST API.<br>
+        Secondly, we worked on a project which consisted of an IoT platform to automate the management of INSA's room. 
+        We first used Jira for project management. It allows you to split the project into several sprints. We used oneM2M to simulate the sensors that will be in the classroom (Movement, interior temperature, exterior temperature).
+        We also used SpringBoot to retrieve and process data from simulated sensors. After our web service was ready, we performed Junit tests to make sure it worked. We finally created an "interface" to visualize the state and the value of all the sensors.
+        <br>The report is available below :
+        <a href="../SOA_Report.pdf" target="_blank">
+          <p>
+            Service Oriented Architecture - Report
+          </p>
+        </a>
+      </p>
+      <br>
+      <h4> Middleware for the Internet of Things </h4>
+      <br>
+      <p class="justify">
+        Throughout this course, we have studied 4 different IoT tools. <br>
+        We started with the MQTT protocol. It is a TCP / IP-based publish and subscribe protocol. We have developed a simple application with an ESP8266 using MQTT as the communication protocol with the server. The application consisted of turning an LED on and off.
+        <br>
+        Subsequently, we used the mangOH yellow cards from Sierra Wireless. We have discovered and explored its Graphical User Interface and some of its features.
+        <br>
+        The OneM2M standard was our next subject of study. We discovered and used this standard through REST requests to create, modify and delete an IoT resource tree. We played with it using multiple REST requests generated from POSTMAN and created sensors and recorded their data / states.
+        <br>
+        Finally, we used Node-Red in order to link the tools seen previously. We used Node-Red to link OneM2M to MQTT.
+        <br>The report is available below :
+        <a href="../M_IoT_Report.pdf" target="_blank">
+          <p>
+            Middleware for the IoT - Report
+          </p>
+        </a>
+      </p>
+      <br>
+      <h4> Adaptability: Cloud and Autonomic Computing </h4>
+      <br>
+      <p class="justify">
+        In this courses, we work on diverse cloud computing technologies.We first worked on virtualization. We have seen their architectures and the differences between the Virtual Machine and containers (CT). Subsequently we used dokcer which is a containerisation service and OpenStack a cloud service.
+        <br>The report is available below :
+         <a href="../Cloud.pdf" target="_blank">
+          <p>
+            Cloud and Autonomic Computing - Report
+          </p>
+        </a>
+      </p>
+    </div>
+
+  <div id="skills">
+    <div class="container">
+      <h3> Skills developped</h3>
+      <br>
+      <h4> Service Oriented Architecture </h4>
+      <h5> Know how to define a Service Oriented Architecture (4)</h5>
+       <p class="justify">  
+        We followed a MOOC course and we discover several standards and technology used in IoT. We learn the basic notions of IoT and then we went into more detail about the oneM2M standard.
+      </p>
+
+      <h5> Deploy an SOA with web services (4)</h5>
+       <p class="justify">  
+        We deploy a service oriented architecture that contains web services using Spring Boot and the REST API. 
+      </p>
+
+      <h5> Deploy and configure an SOA using SOAP (4)</h5>
+      <p class="justify">  
+        During pratical works, we configured, thanks to a WSDL file, and deployed web services using SOAP protocol on a Tomcat Server. 
+      </p>
+      <h5> Deploy and configure an SOA using REST (4)</h5>
+      <p class="justify">  
+        During the practical work, we created REST webservice and deployed it on a Tomcat Server. During the project, we also used the REST API and we deployed our application using SpringBoot.
+      </p>
+      <h5> Integrate a process manager in an SOA</h5>
+      <p class="justify">  
+        We did not integrate a process manager in an SOA neither during the project nor during the pratical works.
+      </p>
+      <br>
+      <h4> Middleware for the Internet of Things </h4>
+      <h5> Know how to situate the main standards for the Internet of Things (4)</h5>
+      <p class="justify">
+        We took a MOOC which introduced us to the main standards of the Internet of Things. We then explored in more depth the OneM2M standards and the MQTT protocol.
+      </p>      
+      <h5> Deploy an architecture compliant to an IoT standard and omplement a sensor network (4) </h5>
+      <p class="justify"> 
+        In this course, we deployed a connected object architecture using the oneM2M standard and the REST API. We made it so that these objects can communicate with each other.
+      </p>
+      <h5> Deploy and configure and IoT architecture using OM2M (4)</h5>
+      <p class="justify"> 
+                
+        During the project, we implemented on OM2M a simulated IoT sensor architecture using the oneM2M standard. 
+      </p>
+
+      <h5> Interact with the different resources of the architecture using REST services (4) </h5>
+      <p class = "justify">
+         We used the REST API to implement the sensor architecture.To communicate with the different resources of this architecture, we also used REST service to access specific Content Instances (Sensor data). 
+      </p>
+    <h5> Integrate a new technology into the deployed architecture (4)</h5>
+      <p class = "justify">   
+        In the pratical work, we extended the MQTT and oneM2M standards through the intermediary of Node-red so that the reception of data on MQTT topics have an influence on the oneM2M architecture.
+      </p>
+      <br>
+      <h4> Adaptability : Cloud and Autonomic Computing </h4>
+      <h5> Understand the concept of cloud computing (4)</h5>
+      <p class="justify">
+        Throughout the Labs, we saw several notions of cloud computing (SaaS, IaaS and PaaS). We have also seen the principles of VMs and containers.
+      </p>
+      <h5> Use a IaaS-Type cloud service (4) </h5>
+      <p class="justify">
+        During the labs, we used an Infrastructure as a Service (IaaS). Through the use of Openstack, we have created several cloud environment instances
+      </p>
+      <h5> Deploy and adapt a cloud-based platform for IoT (4) </h5>
+      <p class="justify">
+        We have, during the practical work, realised several microservices. We used OpenStack to create a cloud environment so that each micro service is deployed on a different VM belonging to a network in order to create an interaction between the host and the micro services.
+      </p>
+    </div>
+  </div>
+
+  <div id="copyrights">
+    <div class="container">
+      <p>
+        &copy; Copyrights <strong>Instant</strong>. All Rights Reserved
+      </p>
+      <div class="credits">
+        <!--
+          You are NOT allowed to delete the credit link to TemplateMag with free version.
+          You can delete the credit link only if you bought the pro version.
+          Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/instant-bootstrap-personal-template/
+          Licensing information: https://templatemag.com/license/
+        -->
+        Created with Instant template by <a href="https://templatemag.com/">TemplateMag</a>
+      </div>
+    </div>
+  </div>
+  <!-- / copyrights -->
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/php-mail-form/validate.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

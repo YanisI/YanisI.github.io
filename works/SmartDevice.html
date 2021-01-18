@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio - Smart Device</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="../img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Static navbar -->
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="../index.html">Yanis Imekraz</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li class="active"><a href="SmartDevice.html" class="smoothscroll">Smart Device</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+
+   <section id="works"></section>
+    <div class="container">
+
+      <br>
+      <br>
+      <h1>Smart Device</h1>
+      <br>
+      <h4> Introduction to Sensors</h4>
+      <br>
+      <h5> AIME : Nano-Sensor </h5>
+      <p class="justify">
+        In this project, we designed a nanoparticle sensor starting from the synthesis of WO3 nanoparticles. We have characterized the sensor produced under different gaseous atmospheres. The final objective was to produce a datasheet.
+        <br>
+        The Datasheet is avaible here : 
+        <a href="../Datasheet.pdf" target="_blank">
+          Datasheet
+        </a>
+      </p>
+         The whole realization is broken down into 4 main parts.
+      </p>
+
+      <br>
+
+      <h5> I - Sythesis of WO3 nanoparticles</h5>
+
+      <p class="justify">
+       To prepare the solution containing the nanoparticles, we started with a hydrolysis-condesation of Na2WO4 solution. We followed the protocol (below) under safety rules to avoid any risks (due to the use of nanoparticles). In addition, the protocol tended to limit the ecological impact as much as possible, mainly by limiting the waste produced.
+      </p>
+
+      <img src="../img/synthesis.png" class="centeredPicture">
+
+      <h5> II - Elaboration of the microelectronic chip </h5>
+
+      <p class="justify"> 
+
+      The sensor is made up of 3 parts: a doped poly-silicon heating resistor, an aluminum resistance for heating and two interdigitated combs where the layer of nanoparticles will be deposited and which will then become our resistors sensitive to the gaseous environment.
+        
+      </p>
+      <img src="../img/Sensor.png" class="centeredPicture" >
+
+      <h5> III - Integration of the sensitive nanoparticle layer on the chip </h5>
+
+      <p class="justify">
+        For the integration of nanoparticles into the sensor, we used Dielectrophoresis (DEP) method. We connect the sensor and we apply a non-uniform electric field on a dielectric particle. Consequently, fields of a particular frequency can manipulate particles with great selectivity and our particles will, thanks to the dielectrophoretic force, integrate on the comb. This method last for a minute and we then can see the result on the microscope.
+      </p> 
+      <img src="../img/AimeSensor.png" class="centeredPicture" >
+
+      <h5> IV - Electrical characterization of the sensor in a controlled atmosphere</h5>
+
+      <p>
+        Once our nanoparticle sensor was ready, we characterized it. First, we measured the resistance values ​​of the sensor using Ohm's law. We obtained different curves (available in the datasheet). <br>
+
+
+        Subsequently, we recorded the response of the gas sensor. We measured the variation of the sensitive layer in the presence of a specific gas at one given concentration in synthetic dry air by following a protocol established to test the response and regeneration thereof. We used two gases which are ethanol and ammonium. The characterization procedure was designed to alternate dry air and air with the desired gas.
+        <br>
+        <br>
+        The procedure can be seen below:
+      </p>
+      <img src="../img/procedure.png" class="centeredPicture" >
+      <br>
+      <h4> Microcontrollers and Open Source Hardware </h4>
+      <br>
+      <h5>  Design of the sensor’s conditioner </h5>
+      <p class="justify">
+        The sensor having a very large resistance does not allow direct measurement of the signal having a current of 100 nA. In order to have a usable signal, we need a conditioning stage. Our conditioner will aim to amplify the signal while filtering the noise.
+
+        We have produced and tested the following conditioner under LTSpice:
+      </p>
+      <img src="../img/LTSpice.png" class="centeredPicture" >
+      
+      <h5>  Design of the gas sensor's shield </h5>
+      <p class="justify">
+        Then come the shield design. After having tested and validated the conditioner, we went to the shield. We will be using KiCad to create the PCB. KiCad is a software that allows us to perform routing and visualize the final result in 3D. We integrate our conditioner on KiCad in addition to adding the RN2483 and the arduino uno for data communication. 
+      </p>
+      <img src="../img/KicadPCB.png" class="centeredPicture"> 
+      <br>
+      <img src="../img/Kicad3D.png" class="centeredPicture">
+      <br>
+      <h5> Arduino Uno for LoRa communication and sensor integration  </h5>
+      <p class="justify">
+         We needed our gas sensor to be able to communicate in order to be used in an IoT environment. We are going to use an Aruino nano coupled to an RN2483 chip for communication. After soldering and connecting the pins, and with the help of TheThingsNetwork (TTN) library our board was able to communicate and send measurements to the TTN site at regular intervals.
+         <br>
+         <img src="../img/TTN.png" class="centeredPicture">
+         When developing the diagram, we took into account the energy consumption. As our sensor only had to send data at certain times, it was not necessary to power the card continuously. We therefore used a transistor in order to optimize consumption and to supply the card only when sending data.
+      </p>
+      <br>
+      <h5> Node-Red Human-machine interface </h5>
+      <p class="justify">
+         We needed our gas sensor to be able to communicate in order to be used in an IoT environment. We are going to use an Aruino nano coupled to an RN2483 chip for communication. After soldering and connecting the pins, and with the help of TheThingsNetwork (TTN) library our board was able to communicate and send measurements to the TTN site at regular intervals.
+         <br>
+         <img src="../img/TTN.png" class="centeredPicture">
+         When developing the diagram, we took into account the energy consumption. As our sensor only had to send data at certain times, it was not necessary to power the card continuously. We therefore used a transistor in order to optimize consumption and to supply the card only when sending data.
+         <br>
+          We used node-red to create a dashboard that allows us to record the measurements and display them in a simple interface. So, on node-red, we realized the flow we wanted to make, starting from a payload reception (ttn uplink), a 'decoding' function, and then a display in the dashboard.
+          <br>
+          <img src="../img/NR.png" class="centeredPicture">
+          <img src="../img/DB.png" class="centeredPicture">
+      </p>
+      <br>
+      <br>
+  </div>
+
+    <div id="skills">
+    <div class="container">
+      <h3> Skills developped</h3>
+      <br>
+      <h4> Introduction to Sensors </h4>
+      <h5> Understand basic notions of sensors, data acquisition (4)</h5>
+      <p class="justify">  
+        By following the course on sensors, we were introduced to several concepts such as passive and active sensors and other theoretical knowledge. Then by designing a gas sensor from start to finish, we were able to understand the concepts related to the sensor.
+      </p>
+
+      <h5> Be able to manufacture a nano-particles sensor using micro-electronics tools (4)</h5>
+       <p class="justify">  
+        By following the different stages of creation, starting from the synthesis of nanoparticles up to its integration on the chip, we have created our own nanoparticle gas sensor during our sessions at AIME.
+      </p>
+
+      <h5> Be able to design the datasheet of the sensor manufactured (3)</h5>
+      <p class="justify">  
+        We went through the different parts of a datasheet during our course on sensors. Thanks to this, we were able to develop a technical sheet of the sensor manufactured by integrating the interesting information necessary for its handling.
+      </p>
+      <br>
+      <h4> Microcontrollers and Open Source Hardware  </h4>
+      <h5> Understand microcontroller architecture and how to use them (3)</h5>
+      <p class="justify">
+        Thanks to previous work during our studies, we were used to using microcontrollers. This year, we were introduced to Arduino. Thanks to the project carried out in MOSH we were able to understand their operation and could use them in good conditions.
+      </p>
+      <h5> Be able to design data acquisition system (3)</h5>
+      <p class="justify"> 
+        We have carried out the complete chain between the output signal of our sensor and the microcontroller through the conditioner. The entire chain produced responds to various constraints in order to integrate the sensor into a data acquisition system.
+        Through this process, we learned to carry out an acquisition chain
+      </p>
+      <h5> Be able to design the electronic circuit of a sensor's signal conditioner (3)</h5>
+      <p class = "justify">
+        We have made a circuit on LTSpice in order to simulate the behavior of the sensor in a gaseous environment. We have evolved the conditioner to meet the needs and ensure a correct signal.
+      </p>
+      <h5> Be able to design a shield to accommodate the gas sensor (3)</h5>
+      <p class = "justify">
+         We designed a shield to accomodate the gas sensor on KiCad. This process wasn't new to me thanks to my past experience (Study and Internship). It was a good wake-up call that allowed me to ensure my control over this area.
+      </p>
+      <h5> Be able to design the software to use the gas sensor and its HMI (4) </h5>
+      <p class = "justify">
+        We have, using Node-red, been able to retrieve the sensor information and display them in a dashboard.
+      </p>
+      <h5> Be able to combine all of the above mentioned components into a smart device (3) </h5>
+      <p class = "justify">
+         We were able to link every part of what we have done in this teaching unit into a smart device. Starting from the gas sensor, we developed using arduino and the RN2483 chip, a communicate device. And finaly, with NodeRed we created  an HMI and displayed the data of our sensor. 
+      </p>
+    </div>
+  </div>
+
+
+  <div id="copyrights">
+    <div class="container">
+      <p>
+        &copy; Copyrights <strong>Instant</strong>. All Rights Reserved
+      </p>
+      <div class="credits">
+        <!--
+          You are NOT allowed to delete the credit link to TemplateMag with free version.
+          You can delete the credit link only if you bought the pro version.
+          Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/instant-bootstrap-personal-template/
+          Licensing information: https://templatemag.com/license/
+        -->
+        Created with Instant template by <a href="https://templatemag.com/">TemplateMag</a>
+      </div>
+    </div>
+  </div>
+  <!-- / copyrights -->
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/php-mail-form/validate.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
